@@ -5,7 +5,7 @@
  */
 
 package lab1;
-
+import java.util.Scanner;
 /**
  *
  * @author Ryan

@@ -28,14 +28,8 @@ public abstract class ProgrammingCourses {
         return courseName;
     }
 
-    public final void setCourseName(String courseName) {
-        if(courseName == null || courseName.length() == 0) {
-            JOptionPane.showMessageDialog(null,
-                    "Error: courseName cannot be null of empty string");
-            System.exit(0);
-        }
-        this.courseName = courseName;
-    }
+    public abstract void setCourseName(String courseName);  
+    
 
     public String getCourseNumber() {
         return courseNumber;
@@ -53,7 +47,14 @@ public abstract class ProgrammingCourses {
     public double getCredits() {
         return credits;
     }
-
+public void setCredits(double credits) {
+        if(credits < 0 || credits > 5.0) {
+            System.out.println(
+                    "Error: credits must be in the range 0.5 to 4.0");
+            System.exit(0);
+        }
+        this.setCredits(credits);
+    }
 
 
     public String getPrerequisites() {
@@ -76,14 +77,7 @@ public abstract class ProgrammingCourses {
     }
     
     
-    public void setCredits(double credits) {
-        if(credits < 0 || credits > 5.0) {
-            System.out.println(
-                    "Error: credits must be in the range 0.5 to 4.0");
-            System.exit(0);
-        }
-        this.setCredits(credits);
-    }
+    
 }
     
 
