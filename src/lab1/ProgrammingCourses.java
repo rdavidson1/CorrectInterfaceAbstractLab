@@ -14,6 +14,7 @@ public abstract class ProgrammingCourses {
     private String courseName;
     private String courseNumber;
     private double credits;
+    private String Prerequisites;
 
     public ProgrammingCourses(String courseName, String courseNumber, double credits) {
         this.courseName = courseName;
