@@ -6,6 +6,8 @@
 
 package lab1;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Ryan
@@ -14,12 +16,13 @@ public abstract class ProgrammingCourses {
     private String courseName;
     private String courseNumber;
     private double credits;
-    private String Prerequisites;
+    private String prerequisites;
 
-//    public ProgrammingCourses(String courseName, String courseNumber, double credits) {
-//        this.courseName = courseName;
-//        this.courseNumber = courseNumber;
-//        this.credits = credits;
+    public ProgrammingCourses(String courseName, String courseNumber, double credits) {
+        this.courseName = courseName;
+        this.courseNumber = courseNumber;
+        this.credits = credits;
+    }
 
     public String getCourseName() {
         return courseName;
@@ -46,12 +49,24 @@ public abstract class ProgrammingCourses {
     }
 
     public String getPrerequisites() {
-        return Prerequisites;
+        return prerequisites;
     }
 
-    public void setPrerequisites(String Prerequisites) {
-        this.Prerequisites = Prerequisites;
+//    public void setPrerequisites(String Prerequisites) {
+//        this.Prerequisites = Prerequisites;
+//    }
+    public void setPrerequisites(String prerequisites) {
+        if(prerequisites == null || prerequisites.length() == 0) {
+            JOptionPane.showMessageDialog(null,
+                    "Error: prerequisites cannot be null of empty string");
+            System.exit(0);}
+        
+        this.prerequisites = prerequisites;
     }
+    public String getCapitalizedCourseName() {
+        return this.getCourseName().toUpperCase();
     }
+}
+    
 
    
