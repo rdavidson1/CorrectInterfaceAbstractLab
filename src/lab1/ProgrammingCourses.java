@@ -16,11 +16,10 @@ public abstract class ProgrammingCourses {
     private double credits;
     private String Prerequisites;
 
-    public ProgrammingCourses(String courseName, String courseNumber, double credits) {
-        this.courseName = courseName;
-        this.courseNumber = courseNumber;
-        this.credits = credits;
-    }
+//    public ProgrammingCourses(String courseName, String courseNumber, double credits) {
+//        this.courseName = courseName;
+//        this.courseNumber = courseNumber;
+//        this.credits = credits;
 
     public String getCourseName() {
         return courseName;
@@ -45,4 +44,14 @@ public abstract class ProgrammingCourses {
     public void setCredits(double credits) {
         this.credits = credits;
     }
-}
+
+    public String getPrerequisites() {
+        return Prerequisites;
+    }
+
+    public void setPrerequisites(String Prerequisites) {
+        this.Prerequisites = Prerequisites;
+    }
+    }
+
+   
