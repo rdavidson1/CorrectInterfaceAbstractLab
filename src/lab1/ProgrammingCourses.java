@@ -11,5 +11,7 @@ package lab1;
  * @author Ryan
  */
 public abstract class ProgrammingCourses {
-    
+    private String courseName;
+    private String courseNumber;
+    private double credits;
 }
