@@ -5,7 +5,7 @@ import javax.swing.JOptionPane;
 
 public class AdvancedJavaCourse extends ProgrammingCourses{
     
-private String courseName;
+
 
      public AdvancedJavaCourse(String courseName, String courseNumber, double credits) {
         super(courseName, courseNumber, credits);
@@ -18,11 +18,17 @@ private String courseName;
                     "Error: courseName cannot be null of empty string");
             System.exit(0);
         }
-        this.courseName = courseName;
+        
     }
-    
+    @Override
+    public final void setCourseNumber(String courseNumber) {
+        if(courseNumber == null || courseNumber.length() == 0) {
+            JOptionPane.showMessageDialog(null,
+                    "Error: courseNumber cannot be null of empty string");
+            System.exit(0);
+        }
 
-
+    }
     
 
     
